@@ -1,4 +1,4 @@
-module github.com/jackrun123/cfiptest
+module github.com/bh-qt/iptest
 
 go 1.22.1
 
