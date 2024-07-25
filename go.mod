@@ -1,4 +1,4 @@
-module github.com/bh-qt/iptest
+module github.com/bh-qt/CFIPSpeedTest
 
 go 1.22.1
 
