@@ -2,9 +2,8 @@ name: build
 
 on:
   release:
-   # types: [created] # 表示在创建新的 Release 时触发
-   
-types: [created, deleted]
+    types: [created] # 表示在创建新的 Release 时触发
+
 
 permissions:
   contents: write
