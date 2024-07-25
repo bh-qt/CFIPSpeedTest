@@ -1,5 +1,5 @@
 # 简介
-本项目基于 [badafans/Cloudflare-IP-SpeedTest](https://github.com/badafans/Cloudflare-IP-SpeedTest) 修改，感谢原作者。
+本项目基于 [jackrun123/cfiptest](https://github.com/jackrun123/cfiptest) 修改，感谢原作者。
 
 Cloudflare IP 测速器是一个使用 Golang 编写的小工具，用于测试一些 Cloudflare 的 IP 地址的延迟和下载速度，并将结果输出到 CSV 文件中。
 
