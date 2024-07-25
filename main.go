@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	asn2 "github.com/bh-qt/CFIPSpeedTest/pkgs/asn"
-	"github.com/bh-qt/CFIPSpeedTest/speed"
+	"github.com/bh-qt/CFIPSpeedTest/pkgs/speed"
 	"math/rand"
 	"net/http"
 	_ "net/http/pprof"
