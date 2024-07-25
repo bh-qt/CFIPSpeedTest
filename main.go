@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	asn2 "github.com/bh-qt/iptest/pkgs/asn"
-	"github.com/bh-qt/iptest/speed"
+	asn2 "github.com/bh-qt/CFIPSpeedTest/pkgs/asn"
+	"github.com/bh-qt/CFIPSpeedTest/speed"
 	"math/rand"
 	"net/http"
 	_ "net/http/pprof"
