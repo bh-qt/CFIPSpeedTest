@@ -133,7 +133,7 @@ func (st *CFSpeedTest) TestTCP(ipPair IpPair) (*Result, error) {
 	defer conn.Close()
 
 	tcpDuration := time.Since(start)
-	return &Result{ipPair.ip, ipPair.port, "", "", "", fmt.Sprintf("%d", tcpDuration.Milliseconds()), tcpDuration}, nil
+	return &Result{ipPair.ip, ipPair.port, "", "", "", "", fmt.Sprintf("%d", tcpDuration.Milliseconds()), tcpDuration}, nil
 }
 
 func (st *CFSpeedTest) TestDelayOnce(ipPair IpPair) (*Result, error) {
