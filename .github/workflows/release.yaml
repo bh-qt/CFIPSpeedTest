@@ -3,10 +3,7 @@ name: build
 on:
   release:
     types: [created] # 表示在创建新的 Release 时触发
-  push:
-    branches: [master]
-  workflow_dispatch:
-  pull_request:
+
 
 permissions:
   contents: write
