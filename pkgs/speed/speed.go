@@ -33,6 +33,7 @@ type Result struct {
 	port        int           // 端口
 	dataCenter  string        // 数据中心
 	region      string        // 地区
+	cca2        string 
 	city        string        // 城市
 	latency     string        // 延迟
 	tcpDuration time.Duration // TCP请求延迟
@@ -203,18 +204,18 @@ func (st *CFSpeedTest) Output(results []*SpeedTestResult) {
 	file.WriteString("\xEF\xBB\xBF")
 	writer := csv.NewWriter(file)
 	if st.SpeedTestThread > 0 {
-		writer.Write([]string{"IP地址", "端口", "TLS", "数据中心", "地区", "城市", "网络延迟(毫秒)", "下载速度(MB/s)"})
+		writer.Write([]string{"IP地址", "端口", "TLS", "数据中心", "地区", "国家", "城市", "网络延迟(毫秒)", "下载速度(MB/s)"})
 	} else {
-		writer.Write([]string{"IP地址", "端口", "TLS", "数据中心", "地区", "城市", "网络延迟(毫秒)"})
+		writer.Write([]string{"IP地址", "端口", "TLS", "数据中心", "地区", "国家", "网络延迟(毫秒)"})
 	}
 	if len(results) == 0 {
 		fmt.Println("没有找到符合的数据")
 	}
 	for _, res := range results {
 		if st.SpeedTestThread > 0 {
-			writer.Write([]string{res.Result.ip, strconv.Itoa(res.Result.port), strconv.FormatBool(st.EnableTLS), res.Result.dataCenter, res.Result.region, res.Result.city, res.Result.latency, fmt.Sprintf("%.2f", res.downloadSpeed)})
+			writer.Write([]string{res.Result.ip, strconv.Itoa(res.Result.port), strconv.FormatBool(st.EnableTLS), res.Result.dataCenter, res.Result.region, res.Result.cca2, res.Result.city, res.Result.latency, fmt.Sprintf("%.2f", res.downloadSpeed)})
 		} else {
-			writer.Write([]string{res.Result.ip, strconv.Itoa(res.Result.port), strconv.FormatBool(st.EnableTLS), res.Result.dataCenter, res.Result.region, res.Result.city, res.Result.latency})
+			writer.Write([]string{res.Result.ip, strconv.Itoa(res.Result.port), strconv.FormatBool(st.EnableTLS), res.Result.dataCenter, res.Result.region, res.Result.cca2, res.Result.city, res.Result.latency})
 		}
 	}
 
