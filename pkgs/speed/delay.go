@@ -100,7 +100,7 @@ func (st *CFSpeedTest) TestDelay(ips []IpPair) chan Result {
 					resultChan <- *result
 					okCount.Add(1)
 				}
-				fmt.Printf("发现有效IP %s 位置信息 %s 延迟 %d 毫秒%s\n", ipPair.String(), result.cca2, result.city, result.tcpDuration.Milliseconds(), filterStr)
+				fmt.Printf("发现有效IP %s 位置信息 %s 延迟 %d 毫秒%s\n", ipPair.String(),result.city, result.tcpDuration.Milliseconds(), filterStr)
 			}
 			if err != nil && st.VerboseMode {
 				fmt.Printf("IP %s 错误, err: %s \n", ipPair.String(), err)
