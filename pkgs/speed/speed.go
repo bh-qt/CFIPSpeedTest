@@ -33,7 +33,7 @@ type Result struct {
 	port        int           // 端口
 	dataCenter  string        // 数据中心
 	region      string        // 地区
-	cca2        string 
+	cca2        string        // 国家
 	city        string        // 城市
 	latency     string        // 延迟
 	tcpDuration time.Duration // TCP请求延迟
