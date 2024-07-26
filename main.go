@@ -30,7 +30,7 @@ func init() {
 	flag.IntVar(&st.MaxThread, "dt", 100, "并发请求最大协程数")
 	flag.IntVar(&st.SpeedTestTimeout, "sto", 5, "速度测试超时时间")
 	flag.IntVar(&st.SpeedTestThread, "st", 1, "下载测速协程数量,设为0禁用测速")
-	flag.StringVar(&st.SpeedTestURL, "url", "speed.bhqt.cf/__down?bytes=100000000", "测速文件地址")
+	flag.StringVar(&st.SpeedTestURL, "url", "speed.bhqt.cf/__down?bytes=50000000", "测速文件地址")
 	flag.StringVar(&st.DelayTestURL, "delay_url", "www.visa.com.hk", "延迟测试地址，要求是使用cloudflare的地址，只用填域名")
 	flag.IntVar(&st.DelayTestType, "dtt", 0, "延迟测试类型, 0: http测试 1：tcp测试")
 	flag.IntVar(&st.MaxSpeedTestCount, "maxsc", 10, "速度测试，最多测试多少个IP")
