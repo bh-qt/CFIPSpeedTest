@@ -1,10 +1,7 @@
-
 name: GitHub CI
 on:
   push:
-    branches: [ master ]
-    tags:
-      - '**'
+    branches: [master]
   workflow_dispatch:
   pull_request:
 
