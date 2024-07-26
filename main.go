@@ -44,7 +44,6 @@ func init() {
 	flag.BoolVar(&printVersion, "v", false, "打印程序版本")
 	flag.BoolVar(&isShowHelp, "h", false, "帮助")
 	flag.StringVar(&debugAddress, "debug", "127.0.0.1:34561", "pprof调试监听地址")
-
 	asnCmd = flag.NewFlagSet("asn", flag.ExitOnError)
 	asnCmd.StringVar(&asn.AsCode, "as", "", "ASN号码，例如13335")
 }
