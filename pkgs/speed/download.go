@@ -52,7 +52,7 @@ func (st *CFSpeedTest) TestDownload(resultChan chan Result) []*SpeedTestResult {
 					if err != nil {
 						fmt.Printf("%s测速无效, err: %s\n", prefix, err)
 					} else {
-						fmt.Printf("%s下载速度 %.2f MB/s，延迟 %s ms，地区 %s\n", prefix, downloadSpeed, res.latency, res.cca2, res.city)
+						fmt.Printf("%s下载速度 %.2f MB/s，延迟 %s ms，地区 %s\n", prefix, downloadSpeed, res.latency, res.city)
 					}
 
 					currentOKCount := okCount.Load()
